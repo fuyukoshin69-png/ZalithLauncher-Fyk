@@ -3,8 +3,7 @@
 /*/build
 local.properties
 .idea/
-.vs/
+.vscode
 /curseforge_key.txt
 /ZalithLauncher/.cxx/
-/ZalithLauncher/src/main/assets/components/lwjgl3/
 /ZalithLauncher/release/
