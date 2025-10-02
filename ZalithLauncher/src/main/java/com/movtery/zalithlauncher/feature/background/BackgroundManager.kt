@@ -10,6 +10,8 @@ import com.movtery.zalithlauncher.feature.log.Logging
 import com.movtery.zalithlauncher.utils.path.PathManager
 import com.movtery.zalithlauncher.utils.file.FileTools.Companion.mkdirs
 import com.movtery.zalithlauncher.utils.image.ImageUtils.Companion.isImage
+import jp.wasabeef.glide.transformations.BlurTransformation
+import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import net.kdt.pojavlaunch.Tools
 import java.io.File
 import java.io.FileReader
@@ -70,7 +72,7 @@ object BackgroundManager {
 
         Glide.with(context).load(backgroundImage)
             .override(backgroundView.width, backgroundView.height)
-            .centerCrop()
+            .transform(CenterCrop(), BlurTransformation(25, 3)) // radius, sampling
             .into(CallbackDrawableImageViewTarget(backgroundView, callback))
     }
 

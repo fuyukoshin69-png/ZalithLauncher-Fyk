@@ -252,7 +252,10 @@ public final class JREUtils {
         if (RendererPluginManager.getSelectedRendererPlugin() != null) return;
 
         if (!rendererId.startsWith("opengles")) {
-            envMap.put("MESA_LOADER_DRIVER_OVERRIDE", "zink");
+            envMap.put("MESA_LOADER_DRIVER_OVERRIDE", "zink"); 
+            envMap.put("LIBGL_ES", "3.3");
+            envMap.put("LIBGL_VERSION_OVERRIDE", "4.5");
+            envMap.put("MESA_GLSL_VERSION_OVERRIDE", "450");
             envMap.put("MESA_GLSL_CACHE_DIR", PathManager.DIR_CACHE.getAbsolutePath());
             envMap.put("force_glsl_extensions_warn", "true");
             envMap.put("allow_higher_compat_version", "true");

@@ -119,7 +119,7 @@ android {
                         task.doLast {
                             val arch = System.getProperty("arch", "all")
                             val assetsDir = task.outputDir.get().asFile
-                            val jreList = listOf("jre-8", "jre-17", "jre-21")
+                            val jreList = listOf("jre-8", "jre-17", "jre-21", "jre-21-physicsmod")
                             println("arch:$arch")
                             jreList.forEach { jreVersion ->
                                 val runtimeDir = File("$assetsDir/components/$jreVersion")
@@ -143,18 +143,11 @@ android {
     }
 
     splits {
-        val arch = System.getProperty("arch", "all")
-        if (arch != "all") {
-            abi {
-                isEnable = true
-                reset()
-                when (arch) {
-                    "arm" -> include("armeabi-v7a")
-                    "arm64" -> include("arm64-v8a")
-                    "x86" -> include("x86")
-                    "x86_64" -> include("x86_64")
-                }
-            }
+        abi {
+            isEnable = true
+            reset() // clear existing ABIs
+            include("arm64-v8a") // only include arm64
+             // optional, avoids building universal APK
         }
     }
 
@@ -252,6 +245,9 @@ dependencies {
     implementation("com.github.megatronking.stringfog:xor:5.0.0")
 
     implementation("top.fifthlight.touchcontroller:proxy-client-android:0.0.2")
+
+    implementation("jp.wasabeef:glide-transformations:4.3.0")
+
 
     // implementation("com.intuit.sdp:sdp-android:1.0.5")
     // implementation("com.intuit.ssp:ssp-android:1.0.5")
