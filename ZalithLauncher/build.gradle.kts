@@ -54,11 +54,10 @@ android {
 
     signingConfigs {
         create("releaseBuild") {
-            val pwd = System.getenv("MOVTERY_KEYSTORE_PASSWORD")
-            storeFile = file("movtery-key.jks")
-            storePassword = pwd
-            keyAlias = "mtp"
-            keyPassword = pwd
+            storeFile = file("debug.keystore")
+            storePassword = "android"
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
         }
         create("customDebug") {
             storeFile = file("debug.keystore")
