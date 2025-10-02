@@ -72,7 +72,7 @@ object BackgroundManager {
 
         Glide.with(context).load(backgroundImage)
             .override(backgroundView.width, backgroundView.height)
-            .transform(CenterCrop(), BlurTransformation(25, 3)) // radius, sampling
+            .transform(CenterCrop(), BlurTransformation(25, 1))
             .into(CallbackDrawableImageViewTarget(backgroundView, callback))
     }
 

@@ -14,6 +14,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Zalith Launcher"
+rootProject.name = "ZalithLauncher-Fyk"
 include(":jre_lwjgl3glfw")
 include(":ZalithLauncher")
