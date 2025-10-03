@@ -45,25 +45,25 @@ class AllSettings {
 
         // Control
         @JvmStatic
-        val disableGestures = BooleanSettingUnit("disableGestures", false)
+        val disableGestures = BooleanSettingUnit("disableGestures", true)
 
         @JvmStatic
-        val disableDoubleTap = BooleanSettingUnit("disableDoubleTap", false)
+        val disableDoubleTap = BooleanSettingUnit("disableDoubleTap", true)
 
         @JvmStatic
         val timeLongPressTrigger = IntSettingUnit("timeLongPressTrigger", 300)
 
         @JvmStatic
-        val buttonScale = IntSettingUnit("buttonscale", 100)
+        val buttonScale = IntSettingUnit("buttonscale", 220)
 
         @JvmStatic
-        val buttonAllCaps = BooleanSettingUnit("buttonAllCaps", false)
+        val buttonAllCaps = BooleanSettingUnit("buttonAllCaps", true)
 
         @JvmStatic
-        val mouseScale = IntSettingUnit("mousescale", 100)
+        val mouseScale = IntSettingUnit("mousescale", 40)
 
         @JvmStatic
-        val mouseSpeed = IntSettingUnit("mousespeed", 100)
+        val mouseSpeed = IntSettingUnit("mousespeed", 170)
 
         @JvmStatic
         val virtualMouseStart = BooleanSettingUnit("mouse_start", true)
@@ -143,16 +143,16 @@ class AllSettings {
 
         // Launcher
         @JvmStatic
-        val checkLibraries = BooleanSettingUnit("checkLibraries", true)
+        val checkLibraries = BooleanSettingUnit("checkLibraries", false)
 
         @JvmStatic
-        val verifyManifest = BooleanSettingUnit("verifyManifest", true)
+        val verifyManifest = BooleanSettingUnit("verifyManifest", false)
 
         @JvmStatic
-        val resourceImageCache = BooleanSettingUnit("resourceImageCache", false)
+        val resourceImageCache = BooleanSettingUnit("resourceImageCache", true)
 
         @JvmStatic
-        val addFullResourceName = BooleanSettingUnit("addFullResourceName", true)
+        val addFullResourceName = BooleanSettingUnit("addFullResourceName", false)
 
         @JvmStatic
         val downloadSource = StringSettingUnit("downloadSource", "default")
@@ -173,10 +173,10 @@ class AllSettings {
         val pageOpacity = IntSettingUnit("pageOpacity", 100)
 
         @JvmStatic
-        val enableLogOutput = BooleanSettingUnit("enableLogOutput", false)
+        val enableLogOutput = BooleanSettingUnit("enableLogOutput", true)
 
         @JvmStatic
-        val quitLauncher = BooleanSettingUnit("quitLauncher", true)
+        val quitLauncher = BooleanSettingUnit("quitLauncher", false)
 
         @JvmStatic
         val acceptPreReleaseUpdates = BooleanSettingUnit("acceptPreReleaseUpdates", false)
@@ -186,7 +186,7 @@ class AllSettings {
         val dumpShaders = BooleanSettingUnit("dump_shaders", false)
 
         @JvmStatic
-        val bigCoreAffinity = BooleanSettingUnit("bigCoreAffinity", false)
+        val bigCoreAffinity = BooleanSettingUnit("bigCoreAffinity", true)
 
         @JvmStatic
         val tcVibrateDuration = IntSettingUnit("tcVibrateDuration", 100)

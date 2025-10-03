@@ -21,18 +21,21 @@
         <item>auto</item>
     </string-array>
 
+    <!-- Launcher themes -->
     <string-array name="launcher_theme_names">
         <item>@string/setting_launcher_theme_system</item>
         <item>@string/setting_launcher_theme_light</item>
-        <item>@string/setting_launcher_theme_dark</item>
+        <item>@string/setting_launcher_theme_dark</item> <!-- New -->
     </string-array>
 
     <string-array name="launcher_theme_values">
         <item>system</item>
         <item>light</item>
         <item>dark</item>
+        <item>purple</item> <!-- New -->
     </string-array>
 
+    <!-- Game menu positioning -->
     <string-array name="game_menu_location_names">
         <item>@string/setting_game_menu_location_center</item>
         <item>@string/setting_game_menu_location_left_or_top</item>
@@ -52,5 +55,4 @@
         <item>top_or_center</item>
         <item>bottom_or_center</item>
     </string-array>
-
 </resources>

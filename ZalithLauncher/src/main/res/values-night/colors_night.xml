@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black_or_white">#FFFFFF</color>
+    <color name="purple">#9C27B0</color>
 
     <color name="background_app">#181818</color>
     <color name="background_app_error">#431A1A</color>
@@ -31,9 +32,10 @@
     <color name="mod_category_fill">#804C4C4C</color>
     <color name="text_background_fill">#B3434343</color>
 
-    <color name="settings_category">#31E2D4</color>
+    <!-- Purple accents -->
+    <color name="settings_category">#BB86FC</color> <!-- Neon purple -->
+    <color name="favorite_color">#9C27B0</color>   <!-- Deep Purple 500 -->
 
     <color name="icon_color">#FFFFFF</color>
-
     <color name="primary_text">#FFFFFF</color>
 </resources>
