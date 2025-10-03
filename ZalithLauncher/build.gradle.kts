@@ -142,11 +142,18 @@ android {
     }
 
     splits {
-        abi {
-            isEnable = true
-            reset() // clear existing ABIs
-            include("arm64-v8a") // only include arm64
-             // optional, avoids building universal APK
+        val arch = System.getProperty("arch", "all")
+        if (arch != "all") {
+            abi {
+                isEnable = true
+                reset()
+                when (arch) {
+                    "arm" -> include("armeabi-v7a")
+                    "arm64" -> include("arm64-v8a")
+                    "x86" -> include("x86")
+                    "x86_64" -> include("x86_64")
+                }
+            }
         }
     }
 
